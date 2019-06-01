@@ -101,10 +101,10 @@ public class MockPlayerInventory implements PlayerInventory {
         return inventoryContents.length + armorContents.length;
     }
 
-    @Override
-    public String getName() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
+//    @Override
+//    public String getName() {
+//        return null;  //To change body of implemented methods use File | Settings | File Templates.
+//    }
 
     @Override
     public ItemStack getItem(int i) {
@@ -218,10 +218,10 @@ public class MockPlayerInventory implements PlayerInventory {
         return null;  //To change body of implemented methods use File | Settings | File Templates.
     }
 
-    @Override
-    public String getTitle() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
-    }
+//    @Override
+//    public String getTitle() {
+//        return null;  //To change body of implemented methods use File | Settings | File Templates.
+//    }
 
     @Override
     public InventoryType getType() {

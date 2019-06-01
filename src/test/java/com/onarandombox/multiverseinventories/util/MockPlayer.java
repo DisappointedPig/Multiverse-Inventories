@@ -13,6 +13,7 @@ import org.bukkit.block.data.BlockData;
 import org.bukkit.conversations.Conversation;
 import org.bukkit.conversations.ConversationAbandonedEvent;
 import org.bukkit.entity.*;
+import org.bukkit.entity.memory.MemoryKey;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerTeleportEvent.TeleportCause;
 import org.bukkit.inventory.*;
@@ -22,6 +23,7 @@ import org.bukkit.metadata.MetadataValue;
 import org.bukkit.permissions.Permission;
 import org.bukkit.permissions.PermissionAttachment;
 import org.bukkit.permissions.PermissionAttachmentInfo;
+import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -65,6 +67,27 @@ public class MockPlayer implements Player {
         this.server = server;
     }
 
+	@Override
+	public <T> void setMemory(MemoryKey<T> memoryKey, T memoryValue) {}
+
+	@Override
+	public <T> T getMemory(MemoryKey<T> memoryKey) {
+		throw new UnsupportedOperationException();
+	}
+
+	@Override
+	public Pose getPose() {
+		return Pose.STANDING;
+	}
+                
+	@Override
+	public void setRotation(float yaw, float pitch) {}
+
+	@Override
+	public PersistentDataContainer getPersistentDataContainer() {
+		throw new UnsupportedOperationException();
+	}
+                                
     @Override
     public void playSound(Location location, String s, float v, float v2) {
 
